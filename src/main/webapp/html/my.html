@@ -1,11 +1,92 @@
-<html>
-<head>
-    <title>RPG</title>
-    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
-    <link href="/css/my.css" rel="stylesheet">
-</head>
-<body>
-<h1>RPG admin panel</h1>
+<html lang="en">
+    <head>
+        <title>RPG</title>
+        <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+        <link href="/css/my.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="mainHeader">RPG admin panel</h1>
+        <div id ="topSelector">
+            <label> Count per page:
+                <select id="pageSizeSelector">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </label>
+        </div>
+        <table id="mainTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Race</th>
+                    <th>Profession</th>
+                    <th>Level</th>
+                    <th>Birthday</th>
+                    <th>Banned</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="pagingButtons"></div>
+        <hr>
+        <h4 style="text-align: center">Create new account:</h4>
 
-</body>
+        <div class="create-account-form">
+            <label>
+                Name:
+                <input type="text" name="newName" maxlength="12" required>
+            </label>
+            <label>
+                Title:
+                <input type="text" name="newTitle" maxlength="30" required>
+            </label>
+            <label>
+                Race:
+                <select name="newRace" required>
+                    <option value="HUMAN">HUMAN</option>
+                    <option value="DWARF">DWARF</option>
+                    <option value="ELF">ELF</option>
+                    <option value="GIANT">GIANT</option>
+                    <option value="ORC">ORC</option>
+                    <option value="TROLL">TROLL</option>
+                    <option value="HOBBIT">HOBBIT</option>
+                </select>
+            </label>
+            <label>
+                Profession:
+                <select name="newProfession" required>
+                    <option value="WARRIOR">WARRIOR</option>
+                    <option value="ROGUE">ROGUE</option>
+                    <option value="SORCERER">SORCERER</option>
+                    <option value="CLERIC">CLERIC</option>
+                    <option value="PALADIN">PALADIN</option>
+                    <option value="NAZGUL">NAZGUL</option>
+                    <option value="WARLOCK">WARLOCK</option>
+                    <option value="DRUID">DRUID</option>
+                </select>
+            </label>
+            <label>
+                Level:
+                <input type="number" name="newLevel" min="0" max="100" required>
+            </label>
+            <label>
+                Birthday:
+                <input type="date" name="newBirthday" required>
+            </label>
+            <label>
+                Banned:
+                <input type="checkbox" name="newBanned">
+            </label>
+
+            <button type="button" id="create-account-button">Save</button>
+        </div>
+    <script src="/html/script.js"></script>
+    </body>
 </html>

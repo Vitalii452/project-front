@@ -1,0 +1,96 @@
+#mainHeader {
+    text-align: center;
+}
+
+#mainTable {
+    width: 100%;
+}
+
+th {
+    background-color: #696969;
+    color: #fff;
+}
+
+td, th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    width: calc(100% / 8);
+}
+#topSelector {
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+#pagingButtons {
+    margin-top: 10px;
+    margin-left: 2px;
+}
+#pagingButtons button {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 5px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+#pagingButtons button:hover {
+    background-color: goldenrod;
+}
+#pagingButtons .current-page {
+    background-color: #FF9232;
+    color: #fff;
+}
+.delete-btn, .edit-btn, .done-btn, .close-btn{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    border-radius: 100%;
+}
+.delete-btn:hover, .edit-btn:hover, .done-btn:hover, .close-btn:hover {
+    filter: brightness(50%);
+    background-color: gray;
+}
+.create-account-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.create-account-form p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.create-account-form label {
+    margin-bottom: 10px;
+}
+.create-account-form label input,
+.create-account-form label select {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.create-account-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.create-account-form button:hover {
+    background-color: goldenrod;
+}
